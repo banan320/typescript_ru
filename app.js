@@ -33,4 +33,48 @@
 //   .reduce((a, b) => a + b);
 // console.log(res);
 //* Tuples ========
-const skill = [1, "Dev"];
+// const skill: [number, string] = [1, "Dev"];
+// const id = skill[0];
+// const skillName = skill[1];
+// skill.push("sdghs")
+// const sdf = skill[2];
+// skill.pop()
+// const [id, skillName] = skill;
+// const arr: [number, string, ...boolean[]] = [1, "dfff", true, true, false];
+// const skill: [number, string] = [1, "Dev"];
+// const skill: readonly [number, string] = [1, "Dev"];
+// skill[0] = 2;
+// const skills: Array<string> = ["CSS", "Dev"];
+// const skills: ReadonlyArray<string> = ["CSS", "Dev"];
+// skills.push("ddd")
+//* Enums =======
+// enum StatusCode {
+//   SUCCESS = 1,
+//   IN_PROCESS = "proc",
+//   FAILED = 10,
+// }
+// const res = {
+//   message: "Done",
+//   statusCode: StatusCode.SUCCESS,
+// };
+// 1 - успех
+// "proc" - в процессе
+// 10 - отклонен
+// if (res.statusCode === StatusCode.SUCCESS) {
+// }
+// function action(status: StatusCode) {}
+// action(StatusCode.SUCCESS);
+// action(1);
+// action("proc");
+// function compute() {
+//   return 3;
+// }
+// enum Roles {
+//   ADMIN = 1,
+//   USER = compute(),
+// }
+// const enum Roles {
+//   ADMIN = 1,
+//   USER = 2,
+// }
+// const res2 = Roles.ADMIN;
