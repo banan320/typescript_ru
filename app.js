@@ -78,3 +78,52 @@
 //   USER = 2,
 // }
 // const res2 = Roles.ADMIN;
+//* Union ===============
+// function logId(id: string | number | boolean) {
+//   console.log(id);
+// }
+// logId(1);
+// logId("fsdfs");
+// logId(true);
+// function logId(id: string | number | boolean) {
+//   if (typeof id === "string") {
+//     console.log(id.toLowerCase());
+//   } else if (typeof id === "number") {
+//     console.log(id.toFixed(2));
+//   } else {
+//     console.log(id);
+//   }
+// }
+// function logError(err: string | string[]) {
+//   if (Array.isArray(err)) {
+//     console.log(err);
+//   } else {
+//     console.log(err);
+//   }
+// }
+// function logObj(obj: { a: number } | { b: number }) {
+//   if ("a" in obj) {
+//     console.log(obj.a);
+//   } else {
+//     console.log(obj.b);
+//   }
+// }
+// function logMultipleIds(a: string | number, b: string | boolean) {
+//   if(a === b) {
+//   } else {
+//     console.log(a,b)
+//   }
+// }
+//* Literal Types ===============
+// function fetchWithAuth(url: string, method: "post" | "get"): 1 | -1 {
+//   return 1;
+// }
+// fetchWithAuth("ss", "get");
+// // fetchWithAuth("ss","ffd")
+// let method = "post";
+// // let method = "3"
+// fetchWithAuth("ss", method as "post");
+//* Types Aliases  ===============
+function fetchWithAuth(url, method) {
+    return 1;
+}
