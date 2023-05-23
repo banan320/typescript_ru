@@ -124,6 +124,117 @@
 // // let method = "3"
 // fetchWithAuth("ss", method as "post");
 //* Types Aliases  ===============
-function fetchWithAuth(url, method) {
-    return 1;
-}
+// type httpMethod = "post" | "get"
+// type coolString = string
+// function fetchWithAuth(url: string, method: httpMethod): 1 | -1 {
+//   return 1;
+// }
+// type User = {
+//   name: string,
+//   age: number,
+//   skills: string[]
+// }
+// type Role = {
+//  id: number
+// }
+// type UserWithRole = User & Role;
+// let user: UserWithRole = {
+//  name: "asd",
+//  age: 33,
+//  skills: ["1", "2"],
+//  id : 1
+// }
+//* Interfaces  ===============
+// interface User  {
+//   name: string;
+//   age: number;
+//   skills: string[];
+//   log: (id:number) => string
+// };
+// interface Role {
+//   roleId: number
+// }
+// interface UserWithRole extends User,Role  {
+//   createdAt: Date;
+// }
+// // interface UserWithRole extends User  {
+// //   roleId: number;
+// // }
+// type User2 = {
+//   name: string;
+//   age: number;
+//   skills: string[];
+//   log: (id:number) => string
+// };
+// let user: UserWithRole = {
+//   name: "asd",
+//   age: 33,
+//   skills: ["1", "2"],
+//   roleId: 1,
+//   createdAt: new Date(),
+//   log(id) {
+//     return ""
+//   }
+// };
+// interface UserDic{
+//   [index: number] : User
+// }
+// type UserDic2 = {
+//   [index: number] : User
+// }
+// type User = {
+//   name: string;
+// };
+// type User ={
+//   age: number
+// }
+// const user: User = {
+//   name: "sss",
+//   age: 22,
+// }
+// type ID = string | number;
+// interface IDI {
+//   ID: string,
+// }
+//* Optional  ===============
+// interface User {
+//   login: string;
+//   password?: string;
+// }
+// type User2 = {
+//   login: string;
+//   password?: string;
+// }
+// const user: User = {
+//   login: "ss@ss.ru",
+// };
+// function multiply(first: number, second?: number ): number {
+//   if(!second) {
+//     return first * first
+//   }
+//   return first * second;
+// }
+// interface UserPro {
+//   login: string;
+//   password?: {
+//     type: "primary" | "secondary"
+//   };
+// }
+// function testPass(user: UserPro) {
+//   const t = user.password?.type
+// }
+// function test(param?: string) {
+//   const t = param ?? multiply(5)
+// }
+//* Void  ===============
+// type voidFunc = () => void;
+// const f1: voidFunc = () => {};
+// const f2: voidFunc = () => {
+//   return true;
+// };
+// const b = f2();
+// const skills = ["Dev", "DevOps"];
+// const user = {
+//   s: ["s"],
+// };
+// skills.forEach((skill) => user.s.push(skill));
