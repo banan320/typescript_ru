@@ -259,3 +259,161 @@
 //   s: ["s"],
 // };
 // skills.forEach((skill) => user.s.push(skill));
+
+//* Unknown  ===============
+// let input: unknown;
+// input = 3;
+// input = ["dsd", "sdsd"];
+
+// // let res: string = input;
+// function run(i: unknown) {
+//   if (typeof i === "number") {
+//     i++;
+//   } else {
+//     i;
+//   }
+// }
+// run(input);
+
+// async function getData() {
+//   try {
+//     await fetch("");
+//   } catch (error) {
+//     if (error instanceof Error) {
+//       console.log(error.message);
+//     }
+//   }
+// }
+
+// async function getDataForce() {
+//   try {
+//     await fetch("");
+//   } catch (error) {
+//     const e = error as Error;
+//     console.log(e.message);
+//   }
+// }
+
+// type U1 = unknown | null;
+// type I1 = unknown & string
+
+//* Never  ===============
+// function genereateError(message: string): never {
+//   throw new Error(message);
+// }
+
+// function dumpError(): never {
+//   // while (true) {}
+// }
+
+// function rec(): never {
+//   return rec();
+// }
+
+// const a: never = 1;
+
+// type paymentAction = "refund" | "checkout" | "reject";
+// function processAction(action: paymentAction) {
+//   switch (action) {
+//     case "refund":
+//       // ...
+//       break;
+//     case "checkout":
+//       //...
+//       break;
+//     // case "reject":
+//     //   //...
+//     //   break;
+//     default:
+//       const _: never = action;
+//       throw new Error("Нет такого action");
+//   }
+// }
+
+// function isString(x: string | number): boolean {
+//   if (typeof x === "string") {
+//     return true;
+//   } else if (typeof x === "number") {
+//     return false;
+//   }
+//   genereateError("sdsdsd");
+// }
+
+// function isString2(x: string | number): boolean {
+//   if (typeof x === "string") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+//   genereateError("sdsdsd");
+// }
+
+//* Null  ===============
+// const n: null = null;
+// const n1: any = null;
+
+// const n2: number = null;
+// const n3: undefined = null;
+// const n4: string = null;
+// const n5: boolean = null;
+
+// interface User {
+//   name: string
+// }
+
+// function getUser() {
+//   if(Math.random() > 0.5) {
+//     return null;
+//   } else {
+//     return {
+//       name: "Вася"
+//     }as User
+//   }
+// }
+
+// const user = getUser();
+// if(user) {
+//   const n55 = user.name
+// }
+
+//* Type conversion  ===============
+// let a = 5;
+// let b: string = a.toString();
+// let c = "sdsfss";
+// // let d: number = +c;
+// let d: number = parseInt(c);
+
+// let e = new String(a)
+// let f:string = new String(a).valueOf()
+// let g:boolean = new Boolean(a).valueOf()
+
+// interface User {
+//   name: string,
+//   email: string,
+//   login: string,
+
+// }
+
+// const user: User = {
+//   name: "Vasya",
+//   email: "vasiliy@yandex.ru",
+//   login: "vasya322"
+// }
+
+// interface Admin {
+//   name: string,
+//   role: number,
+
+// }
+
+// const admin: Admin = {
+//   ...user,
+//   role: 1
+// }
+
+// function userToAdmin(user:User): Admin {
+//   return {
+//     name: user.name,
+//     role:1
+//   }
+// }
