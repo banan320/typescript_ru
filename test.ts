@@ -66,4 +66,23 @@
 //   status: PaymentStatus.Failed;
 //   data: IDataFailed;
 // }
-// function get(): IResponseSuccess | IResponseSFailed {}
+// // function get(): IResponseSuccess | IResponseSFailed {}
+
+// type f = (res: IResponseSuccess | IResponseSFailed) => number;
+
+// type Res = IResponseSuccess | IResponseSFailed;
+
+// function isSuccess(res:Res):res is IResponseSuccess {
+//   if(res.status === PaymentStatus.Success) {
+//     return true
+//   }
+//   return false
+// }
+
+// function getIdFromData(res:Res):number {
+//   if(isSuccess(res)) {
+//     return res.data.databaseId;
+//   } else {
+//     throw new Error(res.data.errorMessage)
+//   }
+// }

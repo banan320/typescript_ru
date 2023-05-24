@@ -403,7 +403,6 @@
 // interface Admin {
 //   name: string,
 //   role: number,
-
 // }
 
 // const admin: Admin = {
@@ -417,3 +416,74 @@
 //     role:1
 //   }
 // }
+
+// //* Type Guard  ===============
+// interface User {
+//   name: string;
+//   email: string;
+//   login: string;
+// }
+
+// const user: User = {
+//   name: "Vasya",
+//   email: "vasiliy@yandex.ru",
+//   login: "vasya322",
+// };
+
+// interface Admin {
+//   name: string;
+//   role: number;
+// }
+
+// // function logId(id: string | number) {
+// //   if (typeof id === "string") {
+// //     console.log(id);
+// //   } else {
+// //     console.log(id);
+// //   }
+// // }
+
+// function logId(id: string | number) {
+//   if (isString(id)) {
+//     console.log(id);
+//   } else {
+//     console.log(id);
+//   }
+// }
+
+// function isString(x: string | number): x is string {
+//   return typeof x === "string";
+// }
+
+// function isAdmin(user: User | Admin): user is Admin {
+//   return "role" in user;
+// }
+
+// function isAdminAlternative(user: User | Admin): user is Admin {
+//   return (user as Admin).role !== undefined;
+// }
+
+// function setRoleZero(user: User | Admin) {
+//   if (isAdmin(user)) {
+//     user.role = 0;
+//   } else {
+//     throw new Error("Пользователь не Админ");
+//   }
+// }
+
+// Asserts ===============
+interface User {
+  name: string;
+}
+
+const a = {};
+
+assertsUser(a);
+a.name = "Alex";
+
+function assertsUser(obj: unknown): asserts obj is User {
+  if (typeof obj === "object" && !!obj && "name" in obj) {
+    return;
+  }
+  throw new Error("Не пользователь");
+}
